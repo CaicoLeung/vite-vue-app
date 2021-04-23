@@ -1,4 +1,5 @@
 import { defineComponent, PropType, ref, toRefs } from 'vue'
+import { Button } from 'ant-design-vue'
 
 export default defineComponent({
   name: 'HelloWorld',
@@ -12,7 +13,6 @@ export default defineComponent({
   setup(props) {
     const { msg } = toRefs(props)
     const count = ref(0)
-
     const addCount = () => count.value++
 
     return { msg, count, addCount }
@@ -47,7 +47,7 @@ export default defineComponent({
           <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
         </p>
 
-        <button onClick={this.addCount}>count is: {this.count}</button>
+        <Button type="primary" onClick={this.addCount}>count is: {this.count}</Button>
         <p> 编辑
           <code>components/HelloWorld.vue</code> 以测试热模块更换.
         </p>
