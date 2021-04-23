@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { message } from 'ant-design-vue';
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.config.globalProperties.$message = message
+
+app.mount('#app')
