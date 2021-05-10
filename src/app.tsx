@@ -9,7 +9,7 @@ export default defineComponent({
     return (
       <>
         <img alt="Vue logo" src={logo} />
-        <HelloWorld msg="Hello Vue 3 + TypeScript + Vite"/>
+        <router-view />
       </>
     )
   }
